@@ -70,7 +70,7 @@ I go back to the main page and just press continue to view the blog site.
 
 It looks like a regular website. 
 
-**Step 5.**
+**Step 6.**
 Let's go ahead and check out **support.futurevera.thm** in the web browser
 
 <img width="951" height="560" alt="image" src="https://github.com/user-attachments/assets/a00ac204-86b1-4f1a-b543-6a4a4e53c885" />
@@ -83,7 +83,7 @@ I immediately see a Subject Alt name that catches my attention. I'm going to add
 
 <img width="806" height="628" alt="image" src="https://github.com/user-attachments/assets/0ebd8cb3-db1c-4208-97e1-2e2dc02e643f" />
 
-**Step 6.**
+**Step 7.**
 I added **https://secrethelpdesk934752.support.futurevera.thm/** to my /etc/hosts file and will now proceed to viewing the page in the web browser. 
 
 I see the same page as usual, going to click advanced and before proceeding forward, checking out the security certificate. There is nothing interesting here, so I will go back and check the website. 
