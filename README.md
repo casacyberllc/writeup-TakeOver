@@ -32,6 +32,8 @@
 **Step 1.** 
 Add machine IP in /etc/hosts
 
+<hr />
+
 **Step 2.** 
 `ffuf -w SecLists/Discovery/Web-Content/common.txt -H "Host: FUZZ.futurevera.thm" -u https://10.10.140.236`
 
@@ -41,6 +43,7 @@ Add machine IP in /etc/hosts
 
 <img width="810" height="522" alt="image" src="https://github.com/user-attachments/assets/2e623e3c-20b9-4b2d-a2b4-9e7ae5d2b1fb" />
 
+<hr />
 
 **Step 3.** 
 
@@ -53,9 +56,12 @@ Add machine IP in /etc/hosts
 
 <img width="751" height="464" alt="image" src="https://github.com/user-attachments/assets/f6c025b9-168b-4d84-b937-b6a87759e34d" />
 
+<hr />
 
 **Step 4.**
 Add new targets, blog.futurevera.thm and support.futurevera.thm to the /etc/hosts file. 
+
+<hr />
 
 **Step 5.**
 I saved the hosts in the /etc/hosts file and decided to check out **blog.futurevera.thm** in the web browser. When going to advanced options to move forward on the potential security risk, I am given the warning that the security certificate for the website is invalid and allows me to view it. I view it. 
@@ -70,6 +76,8 @@ I go back to the main page and just press continue to view the blog site.
 
 It looks like a regular website. 
 
+<hr />
+
 **Step 6.**
 Let's go ahead and check out **support.futurevera.thm** in the web browser
 
@@ -83,6 +91,8 @@ I immediately see a Subject Alt name that catches my attention. I'm going to add
 
 <img width="806" height="628" alt="image" src="https://github.com/user-attachments/assets/0ebd8cb3-db1c-4208-97e1-2e2dc02e643f" />
 
+<hr />
+
 **Step 7.**
 I added **https://secrethelpdesk934752.support.futurevera.thm/** to my /etc/hosts file and will now proceed to viewing the page in the web browser. 
 
@@ -95,11 +105,15 @@ I checked the page source, I didn't see anything interesting.
 I checked the developer tools and looked around all the tabs, nothing unusual or interesting in the headers. 
 
 I did a curl request and got the flag through there, it was located on the header. I used:
+
 `curl --head secrethelpdesk934752.support.futurevera.thm/`
 
 *curl --head sends an HTTP HEAD request to the specified URL*
+
 *-instead of a standard GET request that receives the entire content of a resource, it sends a HEAD request*
+
 *-the server responds by sending only the HTTP response headers, without the actual body of the source*
+
 *-even if curl sends a response body, curl --HEAD will ignore it and only show the headers*
 
 <img width="788" height="127" alt="image" src="https://github.com/user-attachments/assets/2efc7eb9-aa4e-4d46-b2aa-5837ccce83f5" />
